@@ -1,0 +1,132 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.levelBadge {
+    background-color: var(--primary-color);
+    color: #000;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.ruleTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.ruleDesc {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.gridContainer {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+.controls {
+    height: 60px;
+    /* Fixed height to prevent layout jump */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.primaryButton {
+    background-color: var(--primary-color);
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+}
+
+.primaryButton:active {
+    transform: translateY(0);
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--cell-border);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timerIndicator {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    animation: pulse 1s infinite;
+}
+
+.resultActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.successMsg {
+    color: var(--cell-success);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.errorMsg {
+    color: var(--cell-error);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

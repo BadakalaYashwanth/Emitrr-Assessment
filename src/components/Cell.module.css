@@ -1,0 +1,45 @@
+.cell {
+    width: 100%;
+    padding-bottom: 100%;
+    /* Square aspect ratio */
+    background-color: var(--cell-bg);
+    border: 1px solid var(--cell-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.cell:hover:not(:disabled) {
+    filter: brightness(1.2);
+}
+
+.active {
+    background-color: var(--cell-active);
+    box-shadow: 0 0 15px var(--cell-active);
+    transform: scale(1.05);
+    z-index: 10;
+    border-color: transparent;
+}
+
+.selected {
+    background-color: #ffffff;
+    /* White for selected */
+    border-color: #ffffff;
+}
+
+/* We will handle success/error states via specific classes injected based on logic in Grid */
+.correct {
+    background-color: var(--cell-success) !important;
+    box-shadow: 0 0 10px var(--cell-success);
+}
+
+.incorrect {
+    background-color: var(--cell-error) !important;
+    box-shadow: 0 0 10px var(--cell-error);
+}
+
+.missed {
+    border: 2px dashed var(--cell-active);
+    background-color: transparent;
+}

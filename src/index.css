@@ -1,0 +1,45 @@
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #00ff88;
+  --error-color: #ff4d4d;
+  --cell-bg: #333333;
+  --cell-border: #444444;
+  --cell-active: #00ff88;
+  --cell-success: #00cc6a;
+  --cell-error: #ff4d4d;
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
