@@ -1,35 +1,82 @@
-# Pattern Puzzle Game
+# Pattern Puzzle Game 🧩
 
-A React-based memory puzzle game where users must memorize and recreate visual patterns.
+A React-based memory puzzle game where users must observe, memorize, and recreate visual patterns based on mathematical rules.
 
-## Features
-- **5 Levels** with increasing complexity:
-    1. Even Indices
-    2. Diagonals
-    3. Prime Numbers
-    4. Center Cluster
-    5. Modulo Sum Rule
-- **Visual Feedback**: Real-time flashing patterns and instant feedback on guess submission.
-- **Score System**: Earn points for every correct pattern.
-- **Responsive Design**: Works on desktop and mobile.
+> **[Play Live Demo](https://moonlit-manatee-f3edf4.netlify.app/)** 🚀
 
-## Tech Stack
-- React + TypeScript (Vite)
-- CSS Modules for styling
+## 🎮 How to Play
 
-## How to Run Locally
+1. **Watch**: A 5x5 grid will flash a pattern of squares.
+2. **Memorize**: The pattern follows a specific hidden logic (e.g., Even numbers, Prime numbers).
+3. **Recreate**: Select the squares you believe were part of the pattern.
+4. **Win**: Submit your guess to check if you are correct!
 
-1. Install dependencies:
+## 🧠 Levels & Rules
+
+The game gets progressively harder with abstract rules:
+
+| Level | Rule Name | Description |
+|-------|-----------|-------------|
+| **1** | Even Indices | Squares with even index numbers (0, 2, 4...) |
+| **2** | Diagonals | Squares on the main diagonals |
+| **3** | Prime Numbers | Squares whose index is a prime number |
+| **4** | Center Cluster | The center square and its direct neighbors |
+| **5** | Modulo Sum | Squares where `(row + col) % 3 === 0` |
+
+## ✨ Features
+
+- **Progressive Difficulty**: 5 unique levels testing logic and memory.
+- **Visual Feedback**: Interactive grid with success/error states.
+- **Score System**: Earn points for every level completed.
+- **Responsive Design**: Fully playable on desktop and mobile devices.
+- **Modern UI**: Clean, dark-themed aesthetics with smooth transitions.
+
+## 🛠️ Tech Stack
+
+- **React 18** (Functional Components + Hooks)
+- **TypeScript** (Strict typing)
+- **Vite** (Fast build tool)
+- **CSS Modules** (Scoped styling)
+- **Netlify** (Deployment)
+
+## 🚀 Local Development
+
+To run this project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd pattern-puzzle
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the development server:
+3. **Start the development server**
    ```bash
    npm run dev
    ```
+   Open `http://localhost:5173` in your browser.
 
-3. Build for production:
+4. **Build for production**
    ```bash
    npm run build
    ```
+
+## 📂 Project Structure
+
+```
+src/
+├── components/      # UI Components (Grid, Cell, Dashboard)
+├── hooks/           # Custom Hooks (useGameEngine)
+├── logic/           # Game Rules & Predicates
+├── styles/          # CSS Variables & Global Styles
+├── types.ts         # TypeScript Interfaces
+├── App.tsx          # Main Application Component
+└── main.tsx         # Entry Point
+```
+
+---
+**Enjoy the game!** 🕹️
